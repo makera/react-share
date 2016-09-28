@@ -1,6 +1,6 @@
 {
-  "name": "react-share",
-  "version": "1.10.0",
+  "name": "react-share-develop",
+  "version": "0.0.1",
   "description": "Easy social media share buttons and share counts.",
   "main": "./lib/react-share.js",
   "engines": {
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/nygardk/react-share"
+    "url": "https://github.com/lukeswart/react-share"
   },
   "author": {
     "name": "Klaus Nygård",
