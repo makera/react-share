@@ -14,6 +14,7 @@ export default class ShareButton extends Component {
     disabled: PropTypes.bool,
     disabledStyle: PropTypes.object,
     network: PropTypes.oneOf(supportedNetworks),
+    onClick: PropTypes.func,
     opts: PropTypes.object,
     url: PropTypes.string.isRequired,
     style: PropTypes.object,
@@ -65,9 +66,11 @@ export default class ShareButton extends Component {
       className
     );
 
+    const onClick = (this.props.onClick && this.props.onClick.bind(this)) ||
+          this.onClick;
     return (
       <div
-        onClick={this.onClick}
+        onClick={onClick}
         className={classes}
         style={{
           ...style,

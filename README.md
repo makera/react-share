@@ -143,6 +143,8 @@ Props:
 
 * `logoFillColor`: customize logo's fill color (string, default = 'white')
 
+* `onClick`: override the default `onClick` event handler, and delegate by calling `this.onClick(event)` when finished (function, with `event` as an argument)
+
 Example:
 ```
 <TwitterIcon size={32} round={true} />
