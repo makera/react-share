@@ -22,13 +22,14 @@ export function twitter(url, { title, via, hashtags = [] }) {
   });
 }
 
-export function facebook(url, { title, description }) {
+export function facebook(url, { title, description, image }) {
   assert(url, 'facebook.url');
 
   return 'https://facebook.com/sharer.php' + objectToGetParams({
     u: url,
     title,
     description,
+    picture: image,
   });
 }
 
@@ -59,12 +60,13 @@ export function pinterest(url, { media, description }) {
   });
 }
 
-export function vk(url, { title, description }) {
+export function vk(url, { title, description, image }) {
   assert(url, 'vk.url');
 
   return 'https://vk.com/share.php' + objectToGetParams({
     url,
     title,
     description,
+    image,
   });
 }
