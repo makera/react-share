@@ -30,6 +30,9 @@ export default class ShareButton extends Component {
 
   onClick = (e) => {
     if (!this.props.disabled) {
+      if (this.props.onClick) {
+        this.props.onClick(e);
+      }
       e.preventDefault();
 
       const windowOptions = {
@@ -66,11 +69,11 @@ export default class ShareButton extends Component {
       className
     );
 
-    const onClick = (this.props.onClick && this.props.onClick.bind(this)) ||
-          this.onClick;
+    // const onClick = (this.props.onClick && this.props.onClick.bind(this)) ||
+          // this.onClick;
     return (
       <div
-        onClick={onClick}
+        onClick={this.onClick}
         className={classes}
         style={{
           ...style,
